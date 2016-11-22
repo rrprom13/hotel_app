@@ -1,0 +1,45 @@
+The available commands are the ones listed below:
+
+	check_in <room_number> <client_name> [<guests_names>]
+
+		check_in 309 Joe-Smith
+		check_in 125 Gary-Allen Dennis-McGregor
+		check_in 203 July-Barry Keith-McEwans Gregor-Bales
+
+	check_out <room_number>
+
+		check_out 312
+
+	make_reservation <room_number> <client_name>
+
+		make_reservation 125 Tom-Jones
+
+	cancel_reservation <room_number>
+
+		cancel_reservation 143
+
+	search_guest <client_name>
+
+		search_guest Dennis-Ritchie
+
+	search_reservation <client_name>
+
+		search_reservation Ben-Cruise
+
+	list_rooms <room_type> <room_state>
+
+		list_rooms
+		list_rooms available
+		list_rooms available used
+		list_rooms available used double single
+		list_rooms available single
+		list_rooms double single
+		list_rooms double
+
+	info
+
+	commands
+
+	input
+
+	exit

@@ -1,0 +1,25 @@
+This application is due to be used by a hotel's administrator.
+
+The hotel consists of N floors and M rooms per floors, values inserted by the user.
+Floors are numbered from 1 to N, while the room number is based on the formula: <floor_number> * 100 + <room_number_per_floor>.
+Example: for N eq 3 and M eq 9, available rooms will be 101-109, 201-209, 301-309.
+The rooms are disposed as follows:
+	-> if room number mod 3 eq 0, room type will be Single
+	-> if room number mod 3 eq 1, room type will be Double
+	-> if room number mod 3 eq 2, room type will be Suite
+
+Each room will be in one of the states:
+	-> Available - empty room
+		Next available states:
+			- Reserved - if room is booked
+			- Taken - if room is checked-in
+	-> Reserved - booked room
+		Next available states:
+			- Available - through reservation cancel
+			- Taken - through check-in by the client who has previously booked the room
+	-> Taken - occupied room
+		Next available states:
+			- Used - if room is checked-out
+	-> Used - room has not been cleaned after the last client
+		Next available states:
+			- Available - room is ready to host clients
